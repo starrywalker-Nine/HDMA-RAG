@@ -1,0 +1,138 @@
+{
+  "models": {
+    "qwen2.5-7b-instruct": {
+      "model_name": "qwen2.5-7b-instruct",
+      "model_path": "./models/Qwen2.5-7B-Instruct",
+      "max_model_len": 131072,
+      "gpu_memory_utilization": 0.9,
+      "tensor_parallel_size": 1,
+      "dtype": "bfloat16",
+      "trust_remote_code": true,
+      "enforce_eager": false,
+      "max_num_seqs": 256
+    },
+    "qwen2.5-14b-instruct": {
+      "model_name": "qwen2.5-14b-instruct",
+      "model_path": "./models/Qwen2.5-14B-Instruct",
+      "max_model_len": 131072,
+      "gpu_memory_utilization": 0.9,
+      "tensor_parallel_size": 2,
+      "dtype": "bfloat16",
+      "trust_remote_code": true,
+      "enforce_eager": false,
+      "max_num_seqs": 128
+    },
+    "qwen2.5-32b-instruct": {
+      "model_name": "qwen2.5-32b-instruct",
+      "model_path": "./models/Qwen2.5-32B-Instruct",
+      "max_model_len": 131072,
+      "gpu_memory_utilization": 0.9,
+      "tensor_parallel_size": 4,
+      "dtype": "bfloat16",
+      "trust_remote_code": true,
+      "enforce_eager": false,
+      "max_num_seqs": 64
+    },
+    "qwen2.5-72b-instruct": {
+      "model_name": "qwen2.5-72b-instruct",
+      "model_path": "./models/Qwen2.5-72B-Instruct",
+      "max_model_len": 131072,
+      "gpu_memory_utilization": 0.95,
+      "tensor_parallel_size": 4,
+      "dtype": "bfloat16",
+      "trust_remote_code": true,
+      "enforce_eager": false,
+      "max_num_seqs": 32
+    }
+  },
+  "gpu_allocation": {
+    "auto_detect": true,
+    "preferred_models": ["qwen2.5-14b-instruct", "qwen2.5-7b-instruct"],
+    "fallback_model": "qwen2.5-7b-instruct",
+    "memory_requirements": {
+      "qwen2.5-7b-instruct": {
+        "min_memory_gb": 16,
+        "recommended_memory_gb": 24,
+        "min_gpus": 1
+      },
+      "qwen2.5-14b-instruct": {
+        "min_memory_gb": 32,
+        "recommended_memory_gb": 48,
+        "min_gpus": 2
+      },
+      "qwen2.5-32b-instruct": {
+        "min_memory_gb": 80,
+        "recommended_memory_gb": 120,
+        "min_gpus": 4
+      },
+      "qwen2.5-72b-instruct": {
+        "min_memory_gb": 160,
+        "recommended_memory_gb": 200,
+        "min_gpus": 4
+      }
+    }
+  },
+  "optimization_settings": {
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_batched_tokens": 8192,
+    "block_size": 16,
+    "swap_space": 4,
+    "cpu_offload_gb": 0,
+    "quantization": null,
+    "served_model_name": null,
+    "revision": null,
+    "tokenizer_revision": null,
+    "tokenizer_mode": "auto",
+    "disable_log_stats": false,
+    "disable_log_requests": false
+  },
+  "vllm_specific": {
+    "worker_use_ray": false,
+    "engine_use_ray": false,
+    "disable_custom_all_reduce": false,
+    "tokenizer_pool_size": 0,
+    "tokenizer_pool_type": "ray",
+    "tokenizer_pool_extra_config": {},
+    "enable_lora": false,
+    "max_loras": 1,
+    "max_lora_rank": 16,
+    "lora_extra_vocab_size": 256,
+    "lora_dtype": "auto",
+    "max_cpu_loras": null,
+    "device": "auto",
+    "ray_workers_use_nsight": false,
+    "num_gpu_blocks_override": null,
+    "num_lookahead_slots": 0,
+    "model_loader_extra_config": {},
+    "preemption_mode": null,
+    "scheduler_delay_factor": 0.0,
+    "enable_chunked_prefill": null
+  },
+  "python_environment": {
+    "python_version": "3.12",
+    "required_packages": [
+      "vllm>=0.3.0",
+      "torch>=2.1.0",
+      "transformers>=4.36.0",
+      "tokenizers>=0.15.0",
+      "numpy>=1.24.0",
+      "psutil>=5.9.0"
+    ],
+    "cuda_version": "12.1",
+    "environment_variables": {
+      "CUDA_VISIBLE_DEVICES": "auto",
+      "VLLM_USE_MODELSCOPE": "False",
+      "VLLM_WORKER_MULTIPROC_METHOD": "spawn",
+      "VLLM_ENGINE_ITERATION_TIMEOUT_S": "60",
+      "TOKENIZERS_PARALLELISM": "false"
+    }
+  },
+  "monitoring": {
+    "enable_gpu_monitoring": true,
+    "enable_memory_monitoring": true,
+    "enable_performance_logging": true,
+    "log_level": "INFO",
+    "metrics_collection_interval": 10
+  }
+}

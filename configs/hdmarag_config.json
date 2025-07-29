@@ -1,0 +1,261 @@
+{
+  "hdmarag_system_config": {
+    "version": "1.0.0",
+    "description": "HDMARAG (Hierarchical Declarative Memory Augment RAG) System Configuration",
+    "architecture": {
+      "core_components": [
+        "HDMARAGCore",
+        "AbstractionEngine", 
+        "EnhancedRetriever",
+        "HierarchicalChunker"
+      ],
+      "integration_components": [
+        "DialogueQASystem",
+        "OptimizedMemoryChunkExtractor", 
+        "OptimizedMultiTurnRetriever",
+        "AdvancedAnswerModel"
+      ]
+    }
+  },
+  "hierarchical_memory_config": {
+    "memory_types": {
+      "episodic": {
+        "description": "Specific factual information from dialogues",
+        "max_capacity": 100,
+        "retention_policy": "FIFO",
+        "abstraction_level": 1
+      },
+      "semantic": {
+        "description": "Abstract concepts and relationships", 
+        "max_capacity": 50,
+        "retention_policy": "relevance_based",
+        "abstraction_level": 4
+      },
+      "procedural": {
+        "description": "Reasoning processes and methods",
+        "max_capacity": 30,
+        "retention_policy": "usage_based", 
+        "abstraction_level": 3
+      },
+      "meta": {
+        "description": "Meta-cognitive information about reasoning",
+        "max_capacity": 20,
+        "retention_policy": "importance_based",
+        "abstraction_level": 5
+      }
+    },
+    "indexing_strategy": {
+      "concept_hierarchy": {
+        "enabled": true,
+        "max_depth": 5,
+        "branching_factor": 3
+      },
+      "temporal_index": {
+        "enabled": true,
+        "time_windows": ["1h", "1d", "1w", "1m"]
+      },
+      "relevance_graph": {
+        "enabled": true,
+        "max_connections": 10,
+        "similarity_threshold": 0.7
+      },
+      "abstraction_levels": {
+        "enabled": true,
+        "levels": [1, 2, 3, 4, 5],
+        "level_descriptions": {
+          "1": "Concrete facts and data",
+          "2": "Simple patterns and rules", 
+          "3": "Complex relationships",
+          "4": "Abstract concepts",
+          "5": "Meta-cognitive insights"
+        }
+      }
+    }
+  },
+  "step_back_reasoning_config": {
+    "abstraction_strategies": {
+      "conceptual_abstraction": {
+        "enabled": true,
+        "depth_levels": 3,
+        "concept_extraction_method": "hierarchical"
+      },
+      "principle_extraction": {
+        "enabled": true,
+        "principle_types": ["logical", "causal", "temporal", "spatial"],
+        "generalization_threshold": 0.8
+      },
+      "pattern_recognition": {
+        "enabled": true,
+        "pattern_types": ["structural", "functional", "behavioral"],
+        "pattern_complexity": "adaptive"
+      },
+      "domain_mapping": {
+        "enabled": true,
+        "cross_domain_analysis": true,
+        "domain_similarity_threshold": 0.6
+      }
+    },
+    "thinking_elevation": {
+      "dimension_expansion": {
+        "spatial_reasoning": true,
+        "temporal_reasoning": true,
+        "causal_reasoning": true,
+        "analogical_reasoning": true
+      },
+      "depth_enhancement": {
+        "multi_level_analysis": true,
+        "recursive_decomposition": true,
+        "synthesis_integration": true
+      }
+    }
+  },
+  "enhanced_retrieval_config": {
+    "chunk_generation": {
+      "hierarchical_levels": [2000, 1000, 500, 250, 100],
+      "overlap_ratio": 0.1,
+      "boundary_detection": "sentence_aware",
+      "relevance_scoring": "tf_idf_enhanced"
+    },
+    "embedding_comparison": {
+      "similarity_metrics": ["cosine", "euclidean", "manhattan"],
+      "fusion_strategy": "weighted_average",
+      "conflict_resolution": "memory_priority",
+      "enhancement_factors": {
+        "semantic_similarity": 0.4,
+        "structural_similarity": 0.3,
+        "contextual_relevance": 0.3
+      }
+    },
+    "information_fusion": {
+      "fusion_algorithms": ["attention_based", "graph_based", "hierarchical"],
+      "quality_assessment": {
+        "completeness_check": true,
+        "consistency_validation": true,
+        "relevance_filtering": true
+      },
+      "enhancement_validation": {
+        "improvement_threshold": 0.1,
+        "confidence_boost_factor": 1.2,
+        "fallback_strategy": "original_chunks"
+      }
+    }
+  },
+  "task_adaptation_config": {
+    "supported_tasks": {
+      "multi_hop": {
+        "reasoning_chain_length": 5,
+        "evidence_aggregation": "step_wise",
+        "intermediate_validation": true
+      },
+      "summarization": {
+        "compression_ratio": 0.3,
+        "key_point_extraction": "importance_based",
+        "coherence_maintenance": true
+      },
+      "single_doc_qa": {
+        "passage_selection": "relevance_ranked",
+        "answer_extraction": "span_based",
+        "confidence_calibration": true
+      },
+      "classification": {
+        "feature_extraction": "hierarchical",
+        "decision_boundary": "adaptive",
+        "uncertainty_quantification": true
+      },
+      "retrieval": {
+        "ranking_algorithm": "learning_to_rank",
+        "diversity_promotion": true,
+        "result_explanation": true
+      },
+      "code": {
+        "syntax_awareness": true,
+        "semantic_understanding": true,
+        "execution_context": true
+      },
+      "counting": {
+        "entity_recognition": true,
+        "duplicate_detection": true,
+        "verification_strategy": "cross_validation"
+      }
+    }
+  },
+  "performance_optimization": {
+    "memory_management": {
+      "garbage_collection": "adaptive",
+      "memory_compression": true,
+      "cache_strategy": "LRU_enhanced"
+    },
+    "computational_efficiency": {
+      "parallel_processing": true,
+      "batch_optimization": true,
+      "lazy_evaluation": true
+    },
+    "quality_assurance": {
+      "answer_validation": true,
+      "consistency_checking": true,
+      "confidence_calibration": true
+    }
+  },
+  "evaluation_metrics": {
+    "core_metrics": {
+      "hierarchical_efficiency": {
+        "description": "Effectiveness of hierarchical memory organization",
+        "calculation": "memory_utilization / ideal_memory_structure",
+        "target_range": [0.7, 1.0]
+      },
+      "enhancement_score": {
+        "description": "Improvement over baseline retrieval",
+        "calculation": "enhanced_performance / baseline_performance",
+        "target_range": [1.1, 2.0]
+      },
+      "abstraction_quality": {
+        "description": "Quality of step-back reasoning",
+        "calculation": "abstraction_relevance * abstraction_depth",
+        "target_range": [0.6, 1.0]
+      },
+      "fusion_effectiveness": {
+        "description": "Success of information fusion",
+        "calculation": "fused_quality / max(individual_qualities)",
+        "target_range": [1.0, 1.5]
+      }
+    },
+    "system_metrics": {
+      "processing_efficiency": {
+        "description": "Overall system processing speed",
+        "calculation": "ideal_time / actual_time",
+        "target_range": [0.5, 1.0]
+      },
+      "memory_utilization": {
+        "description": "Effective use of memory resources",
+        "calculation": "useful_memories / total_memories",
+        "target_range": [0.7, 0.9]
+      },
+      "answer_quality": {
+        "description": "Quality of generated answers",
+        "calculation": "accuracy * completeness * relevance",
+        "target_range": [0.8, 1.0]
+      }
+    }
+  },
+  "integration_settings": {
+    "api_configuration": {
+      "default_model": "qwen2.5-7b-instruct",
+      "fallback_models": ["qwen2.5-0.5b-instruct"],
+      "max_tokens": 2048,
+      "temperature": 0.1,
+      "timeout_seconds": 60
+    },
+    "data_pipeline": {
+      "input_validation": true,
+      "preprocessing": "adaptive",
+      "postprocessing": "quality_enhanced",
+      "error_handling": "graceful_degradation"
+    },
+    "logging_and_monitoring": {
+      "log_level": "INFO",
+      "performance_tracking": true,
+      "memory_monitoring": true,
+      "error_reporting": "detailed"
+    }
+  }
+}
